@@ -1,0 +1,15 @@
+{
+	"buildType": "dev",
+	"port": 3000,
+	"database": "db-dev",
+	"ssl": {
+		"privateKey": "",
+		"certificate": ""
+	},
+	"logging": {
+		"morganFormate": "tiny",
+		"path": "./",
+		"filename": ""
+	},
+	"allowCorsOrigins": ["*"]
+}
