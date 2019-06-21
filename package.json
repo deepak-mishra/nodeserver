@@ -1,0 +1,37 @@
+{
+  "name": "node-server",
+  "version": "1.0.0",
+  "description": "node ",
+  "main": "index.js",
+  "repository": "na",
+  "author": "Deepak Mishra",
+  "license": "MIT",
+  "private": null,
+  "scripts": {
+    "clean": "rimraf dist",
+    "prestart": "npm run clean",
+    "dev": "cross-env NODE_ENV=development NPCONFIG=dev && webpack --watch",
+    "server": "tsc & nodemon dist/server/index.js",
+    "build": "webpack --config prod.config.js"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "nodemon-webpack-plugin": "^4.0.8",
+    "rimraf": "^2.6.3",
+    "ts-loader": "^6.0.3",
+    "typescript": "^3.5.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@types/node": "^12.0.8",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.18.0",
+    "moment": "^2.24.0",
+    "path": "^0.12.7",
+    "winston": "^3.2.1"
+  }
+}
